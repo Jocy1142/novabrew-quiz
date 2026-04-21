@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaBrew Style Preview - Minimal</title>
+    <style>
+      :root {
+        --bg: #f5f1ea;
+        --panel: rgba(255, 252, 247, 0.88);
+        --text: #2f241d;
+        --muted: #76665b;
+        --accent: #8c5f3d;
+        --accent-soft: #e8dbce;
+        --border: rgba(84, 61, 46, 0.14);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Avenir Next", "Segoe UI", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(191, 151, 116, 0.18), transparent 32%),
+          linear-gradient(135deg, #efe7dc 0%, var(--bg) 58%, #e9dfd1 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px;
+      }
+
+      .card {
+        width: min(760px, 100%);
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        padding: 40px;
+        backdrop-filter: blur(18px);
+        box-shadow: 0 20px 60px rgba(71, 47, 31, 0.12);
+      }
+
+      .eyebrow {
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: var(--muted);
+        margin-bottom: 16px;
+      }
+
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(30px, 4vw, 46px);
+        line-height: 1.05;
+        font-weight: 700;
+      }
+
+      p {
+        margin: 0 0 28px;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.6;
+      }
+
+      .question {
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .options {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .option {
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.72);
+        border-radius: 18px;
+        padding: 20px;
+        font-size: 16px;
+        line-height: 1.45;
+        transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+      }
+
+      .option:hover {
+        transform: translateY(-2px);
+        border-color: rgba(140, 95, 61, 0.34);
+        box-shadow: 0 12px 24px rgba(84, 61, 46, 0.08);
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 28px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .button {
+        padding: 12px 18px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: white;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+
+      @media (max-width: 640px) {
+        .card {
+          padding: 28px;
+          border-radius: 24px;
+        }
+
+        .options {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <div class="eyebrow">NovaBrew Quiz Preview / Minimal</div>
+      <h1>Find The Coffee That Feels Like You.</h1>
+      <p>
+        Clean, calm, and premium. This version feels like a specialty coffee brand
+        that wants to feel thoughtful and elevated from the first click.
+      </p>
+
+      <div class="question">It is Saturday morning. What sounds best?</div>
+      <section class="options">
+        <div class="option">A slow sunrise, fresh playlist, and a balanced cup that always delivers.</div>
+        <div class="option">A rich, smoky brew before you head out and take on the day.</div>
+        <div class="option">A warm blanket, soft light, and something sweet enough to linger over.</div>
+        <div class="option">Trying the strangest thing on the menu just to see where it takes you.</div>
+      </section>
+
+      <div class="footer">
+        <span>Question 2 of 6</span>
+        <span class="button">Next</span>
+      </div>
+    </main>
+  </body>
+</html>

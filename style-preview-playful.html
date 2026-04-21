@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaBrew Style Preview - Playful</title>
+    <style>
+      :root {
+        --bg: #fff3de;
+        --card: #fffaf3;
+        --text: #4c2e1f;
+        --muted: #8c6a54;
+        --orange: #ff995f;
+        --red: #ec6d52;
+        --yellow: #ffd166;
+        --green: #75c39a;
+        --border: rgba(76, 46, 31, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Trebuchet MS", "Avenir Next", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top right, rgba(255, 209, 102, 0.45), transparent 24%),
+          radial-gradient(circle at bottom left, rgba(117, 195, 154, 0.32), transparent 28%),
+          linear-gradient(180deg, #fff5e6 0%, var(--bg) 100%);
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+
+      .card {
+        width: min(760px, 100%);
+        background: var(--card);
+        border: 2px solid rgba(255, 153, 95, 0.18);
+        border-radius: 32px;
+        padding: 34px;
+        box-shadow: 0 20px 50px rgba(123, 78, 46, 0.12);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .blob {
+        position: absolute;
+        border-radius: 999px;
+        opacity: 0.9;
+      }
+
+      .blob.one {
+        width: 130px;
+        height: 130px;
+        top: -40px;
+        right: -20px;
+        background: rgba(255, 209, 102, 0.35);
+      }
+
+      .blob.two {
+        width: 160px;
+        height: 160px;
+        bottom: -64px;
+        left: -30px;
+        background: rgba(117, 195, 154, 0.28);
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(255, 153, 95, 0.16);
+        color: #9e4f2c;
+        font-weight: 700;
+        font-size: 13px;
+        margin-bottom: 16px;
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(30px, 5vw, 48px);
+        line-height: 1.02;
+      }
+
+      p {
+        margin: 0 0 24px;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.55;
+        max-width: 610px;
+      }
+
+      .question {
+        font-size: 22px;
+        font-weight: 800;
+        margin-bottom: 16px;
+      }
+
+      .options {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .option {
+        border: 1px solid var(--border);
+        background: white;
+        border-radius: 22px;
+        padding: 18px;
+        min-height: 118px;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        font-size: 15px;
+        line-height: 1.45;
+      }
+
+      .icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        font-size: 20px;
+        flex: 0 0 auto;
+      }
+
+      .i1 { background: rgba(236, 109, 82, 0.16); }
+      .i2 { background: rgba(255, 209, 102, 0.26); }
+      .i3 { background: rgba(117, 195, 154, 0.24); }
+      .i4 { background: rgba(255, 153, 95, 0.18); }
+
+      .footer {
+        margin-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--muted);
+      }
+
+      .button {
+        padding: 13px 18px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--red), var(--orange));
+        color: white;
+        font-weight: 800;
+      }
+
+      @media (max-width: 640px) {
+        .options {
+          grid-template-columns: 1fr;
+        }
+
+        .card {
+          padding: 26px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <div class="blob one"></div>
+      <div class="blob two"></div>
+
+      <div class="eyebrow">☕ NovaBrew Quiz Preview / Playful</div>
+      <h1>Find Your Coffee Alter Ego.</h1>
+      <p>
+        Friendly, colorful, and easy to share. This version feels warm and inviting,
+        like a modern personality quiz with real brand charm.
+      </p>
+
+      <div class="question">Pick the vibe that sounds most like your perfect coffee moment.</div>
+      <section class="options">
+        <div class="option">
+          <div class="icon i1">🔥</div>
+          <div>A fast-moving morning, bold energy, and something strong enough to keep up.</div>
+        </div>
+        <div class="option">
+          <div class="icon i2">🌤️</div>
+          <div>A well-paced day, smooth routine, and a cup that always feels just right.</div>
+        </div>
+        <div class="option">
+          <div class="icon i3">📚</div>
+          <div>A soft chair, slow music, and a warm mug you can hold onto for a while.</div>
+        </div>
+        <div class="option">
+          <div class="icon i4">🧭</div>
+          <div>A spontaneous detour, a strange new cafe, and the weirdest pour on the menu.</div>
+        </div>
+      </section>
+
+      <div class="footer">
+        <span>Question 3 of 6</span>
+        <span class="button">See My Type</span>
+      </div>
+    </main>
+  </body>
+</html>
