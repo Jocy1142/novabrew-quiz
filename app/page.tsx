@@ -176,9 +176,9 @@ export default function Home() {
               <div className="flex flex-col justify-between gap-8">
                 <div className="space-y-5">
                   <p className="max-w-2xl text-lg leading-8 text-[rgba(47,34,28,0.8)] sm:text-xl">
-                    A six-question experience built to turn generic coffee
-                    subscriptions into something personal, polished, and worth
-                    staying for.
+                    Now live: a six-question experience built to turn generic
+                    coffee subscriptions into something personal, polished, and
+                    worth staying for.
                   </p>
                   <div className="grid gap-3 sm:grid-cols-3">
                     {[
